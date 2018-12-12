@@ -482,6 +482,7 @@ footer.footer2 .copy p{
         width: inherit;
         height: 100vh;
         justify-content: space-evenly;
+        border-bottom: 1px solid #303030;
     }
     .services .col p{
         width: inherit;
