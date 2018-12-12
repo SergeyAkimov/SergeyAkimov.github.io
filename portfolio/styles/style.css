@@ -347,7 +347,12 @@ header .header-title p{
     line-height: 29px;
     width: inherit;
 }   
-    
+    header .header-title .first-svg{
+        top: 10px;
+    }
+    header .header-title .second-svg{
+        display: none;
+    }
 div.about{
     height: 100vh;
     display: flex;
