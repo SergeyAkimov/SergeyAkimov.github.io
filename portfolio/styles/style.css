@@ -299,7 +299,7 @@ footer span{
 }
 /*/footer*/
 
-/*для мобтльных устройств*/
+/*для мобтльных устройств с портретной ориентацией*/
 @media screen and (max-width:480px) {
 /*    header*/
 header{
