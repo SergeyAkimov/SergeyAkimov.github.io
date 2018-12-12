@@ -443,16 +443,21 @@ footer.footer2 .copy p{
     }
     .top-page nav .logo{
         width: inherit;
+        height: 10vh;
         padding: 0px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
     .top-page nav ul{
         width: inherit;
+        height: 90vh;
         flex-direction: column;
+        justify-content: space-evenly;
     }
     .top-page nav li{
         width: inherit;
         height: 7vh;
-        line-height: 7vh;
         align-self: center;
     }
     .top-page nav li a:hover{
@@ -461,6 +466,8 @@ footer.footer2 .copy p{
     .top-page nav li a{
         width: inherit;
         font-size: 1.2em;
+        line-height: 7vh;
+        padding: 0;
     }
 }
 /*/стили для телефона*/
