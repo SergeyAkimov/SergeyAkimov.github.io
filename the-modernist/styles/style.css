@@ -426,3 +426,40 @@ footer.footer2 .copy p{
     font-size: 13px;
 }
 /*/footer*/
+
+/*стили для телефона*/
+@media screen and (max-width:479px){
+    header.top-page{
+        width: 100%;
+        height: 100vh;
+    }
+    header.top-page nav{
+        width: inherit;
+        height: inherit;
+        flex-direction: column;
+        position: relative;
+        border-bottom: 5px solid transparent;
+    }
+    .top-page nav .logo{
+        width: inherit;
+        padding: 0px 10px;
+    }
+    .top-page nav ul{
+        width: inherit;
+        flex-direction: column;
+        position: absolute;
+        bottom: 0;
+    }
+    .top-page nav li{
+        width: inherit;
+        align-self: center;
+    }
+    .top-page nav li a:hover{
+        border-radius: 0px;
+    }
+    .top-page nav li a{
+        width: inherit;
+        padding: 0 10px;
+    }
+}
+/*/стили для телефона*/
