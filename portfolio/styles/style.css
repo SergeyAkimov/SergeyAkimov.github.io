@@ -108,12 +108,16 @@ div.services{
 }
 .services section{
     width: 900px;
+    height: 247px;
     border: 2px solid #fff;
     border-top: none;
     position: relative;
     color: #fff;
     text-align: center;
-    padding: 75px 174px 55px;
+/*    padding: 75px 174px 55px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .services section h3{
     width: 419px;
@@ -363,10 +367,7 @@ div.services{
     border: none;
     position: relative;
     color: #fff;
-    display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
     text-align: center;
     padding: 0px 10px;
 }
