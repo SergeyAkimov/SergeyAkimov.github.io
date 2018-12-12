@@ -330,14 +330,16 @@ footer span{
 }
 /*/footer*/
 
-@media screen and (max-width:480px) {
-    header{
-        width: auto;
-        background-position: center;
-    }
-    header .header-title{
-        width: auto;
-    }
+/*для мобтльных устройств*/
+@media screen and (min-width:480px) and (max-width:800px) {
+/*    header*/
+header{
+    width: auto;
+    background-position: center;
+}
+header .header-title{
+    width: auto;
+}
 header .header-title h1{
     width: inherit;
     font-size: 34px;
@@ -347,12 +349,15 @@ header .header-title p{
     line-height: 29px;
     width: inherit;
 }   
-    header .header-title .first-svg{
-        top: 10px;
-    }
-    header .header-title .second-svg{
-        display: none;
-    }
+header .header-title .first-svg{
+    top: 10px;
+}
+header .header-title .second-svg{
+    display: none;
+}
+/*    /header*/
+    
+/*    about*/
 div.about{
     height: 100vh;
     display: flex;
@@ -374,10 +379,10 @@ div.about{
 }
 .about section p{
     width: inherit;
-    font-size: 16px;
-    line-height: 25.89px;
 }
+/*    /about*/  
     
+/*    services*/
 div.services{
     height: 100vh;
     width: auto;
@@ -412,7 +417,9 @@ div.services{
     font-size: 16px;
     line-height: 25.89px;
 }
+/*    /services*/
     
+/*    what*/
 div.what{
     width: 100%;
     height: auto;
@@ -440,7 +447,9 @@ div.what{
     position: relative;
     border-bottom: 1px solid #3c3c3c;
 }
+/*    /what*/ 
     
+/*    works*/
 div.works{
     height: 100vh;
     flex-direction: column;
@@ -463,7 +472,9 @@ div.works{
     left: 10px;
     font-size: 30px;
 }
+/*    /works*/
     
+/*    contact*/
 div.contact{
     height: 100vh;
     display: flex;
@@ -499,6 +510,9 @@ div.contact{
     font-size: 16px;
     line-height: 58px;
 }
+/*    /contact*/
+    
+/*    footer*/
     footer{
     width: inherit;
     height: 50px;
@@ -520,17 +534,6 @@ footer span{
     color: #3c3c3c;
     align-self: center;
 }
+/*    /footer*/
 }
-@media screen and (max-width:768px){
-    .services section{
-        width: 100%;
-        padding: 75px 0px 55px;
-    }
-    .services section h3::after{
-        right: -172px;
-    }
-    .services section p{
-        width: inherit;
-        padding: 0px 10px;
-    }
-}
+/*для мобтльных устройств*/
