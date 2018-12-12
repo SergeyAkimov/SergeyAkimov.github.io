@@ -478,9 +478,15 @@ footer.footer2 .copy p{
         height: auto;
         flex-direction: column;
     }
-    .services col{
+    .services .col{
         width: inherit;
         height: 100vh;
+        justify-content: space-evenly;
+    }
+    .services .col p{
+        width: inherit;
+        padding: 0px 10px;
+        font-size: 1.2em;
     }
 /*    /services*/
 }
