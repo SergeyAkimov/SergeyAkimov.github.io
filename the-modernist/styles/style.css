@@ -619,18 +619,18 @@ footer.footer2 .copy p{
     footer .bottom-page .col input{
         height: 50px;
         width: 100%;
-        font-size: 1.2em;
+        font-size: 1em;
     }
     footer .bottom-page .col textarea{
-        font-size: 1.2em;
+        font-size: 1em;
     }
     footer .bottom-page .col input[type=submit]{
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
     footer .bottom-page .col input::-webkit-input-placeholder,
     footer .bottom-page .col textarea::-webkit-input-placeholder{
     color: #989898;
-    font-size: 1.2em;
+    font-size: 1em;
 }
     footer.footer2{
         height: auto;
