@@ -531,15 +531,15 @@ footer.footer2 .copy p{
     }
     footer .bottom-page .col{
         width: inherit;
-        height: 50vh;
+/*        height: 50vh;*/
         padding: 10px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin-top: 50px;
     }
     footer .bottom-page .col h2{
         border-bottom: 1px solid #fff;
+        margin-bottom: 20px;
     }
 /*
     footer .bottom-page .col h3{
@@ -576,6 +576,15 @@ footer.footer2 .copy p{
         font-size: .8em;
     }
 */
+    footer .bottom-page .col form{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    footer .bottom-page .col input{
+        width: 100%;
+    }
     footer.footer2{
         height: auto;
     }
