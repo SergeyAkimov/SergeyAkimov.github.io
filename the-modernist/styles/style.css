@@ -556,8 +556,6 @@ footer.footer2 .copy p{
         margin-bottom: 0;
     }
     footer.footer2{
-        position: absolute;
-        bottom: 0;
         height: auto;
     }
     footer.footer2 .copy{
