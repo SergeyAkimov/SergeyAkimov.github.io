@@ -495,7 +495,7 @@ footer.footer2 .copy p{
 /*    title*/
     div.title{
         width: 100%;
-        margin: 10px 0px;
+        margin: 20px 0px 10px;
     }
     
 /*    /title*/
@@ -504,14 +504,15 @@ footer.footer2 .copy p{
     div.gallery{
         width: 100%;
         height: auto;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
     .gallery .row{
-        height: 100vh;
+        height: auto;
         flex-direction: column;
     }
     .gallery .row .col{
         width: 100%;
+        margin-bottom: 20px;
     }
     .gallery .row .col p{
         left: 0;
