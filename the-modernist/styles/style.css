@@ -572,10 +572,10 @@ footer.footer2 .copy p{
     }
     footer .bottom-page .col ul li{
         height: calc(80vh/7);
-        font-size: .87em;
     }
     footer .bottom-page .col ul li a{
         line-height: calc(80vh/7);
+        font-size: .8em;
     }
     footer.footer2{
         height: auto;
