@@ -287,7 +287,7 @@ footer .bottom-page{
     width: 960px;
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 footer .bottom-page .col{
     width: 225px;
@@ -531,6 +531,8 @@ footer.footer2 .copy p{
         width: inherit;
         height: 100vh;
         padding: 0px 10px;
+        display: flex;
+        flex-direction: column;
         justify-content: space-evenly;
     }
     footer .bottom-page .col h2{
