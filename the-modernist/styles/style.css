@@ -524,7 +524,6 @@ footer.footer2 .copy p{
 /*    footer*/
     footer{
         height: auto;
-        
     }
     footer .bottom-page{
         width: inherit;
@@ -532,18 +531,17 @@ footer.footer2 .copy p{
     }
     footer .bottom-page .col{
         width: inherit;
-        height: 100vh;
+        height: 50vh;
         padding: 10px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        border-bottom: 1px solid #fff;
+        margin-top: 50px;
     }
     footer .bottom-page .col h2{
-        height: auto;
-        margin-bottom: 0;
-        font-size: 2em;
+        border-bottom: 1px solid #fff;
     }
+/*
     footer .bottom-page .col h3{
         margin-bottom: 0;
         font-size: 1.5em;
@@ -577,6 +575,7 @@ footer.footer2 .copy p{
         line-height: calc(80vh/7);
         font-size: .8em;
     }
+*/
     footer.footer2{
         height: auto;
     }
