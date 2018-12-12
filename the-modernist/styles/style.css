@@ -633,7 +633,9 @@ footer.footer2 .copy p{
     font-size: 1em;
 }
     footer.footer2{
-        height: auto;
+        height: 40px;
+        display: flex;
+        align-items: center;
     }
     footer.footer2 .copy{
         padding: 0px 10px;
