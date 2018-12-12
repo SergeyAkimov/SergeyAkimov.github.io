@@ -437,6 +437,7 @@ footer.footer2 .copy p{
         width: inherit;
         height: inherit;
         flex-direction: column;
+        justify-content: flex-start;
         position: relative;
         border-bottom: 5px solid transparent;
     }
@@ -447,11 +448,11 @@ footer.footer2 .copy p{
     .top-page nav ul{
         width: inherit;
         flex-direction: column;
-        position: absolute;
-        bottom: 0;
     }
     .top-page nav li{
         width: inherit;
+        height: 7vh;
+        line-height: 7vh;
         align-self: center;
     }
     .top-page nav li a:hover{
@@ -459,7 +460,7 @@ footer.footer2 .copy p{
     }
     .top-page nav li a{
         width: inherit;
-        padding: 0 10px;
+        font-size: 1.2em;
     }
 }
 /*/стили для телефона*/
