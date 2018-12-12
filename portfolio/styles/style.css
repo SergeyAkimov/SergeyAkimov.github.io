@@ -445,6 +445,10 @@ div.works{
 .works .works-row section h3{
     left: 10px;
     font-size: 30px;
+}   
+.works .works-row section h3{
+    position: static;
+    font-size: 30px;
 }
 /*    /works*/
     
@@ -510,4 +514,14 @@ footer span{
 }
 /*    /footer*/
 }
-/*для мобтльных устройств*/
+/*/для мобильных устройств*/
+
+/*для ipnoneX*/
+@media screen and (max-width:812px){
+.works .works-row section h3{
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+}
+}
+/*/для ipnoneX*/
