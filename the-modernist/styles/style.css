@@ -480,7 +480,7 @@ footer.footer2 .copy p{
     }
     .services .col{
         width: inherit;
-        height: 100vh;
+        height: 50vh;
         justify-content: space-evenly;
         border-bottom: 1px solid #303030;
     }
