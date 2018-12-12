@@ -481,167 +481,166 @@ footer.footer2 .copy p{
 /*стили для телефона*/
 @media screen and (max-width:479px){
 /*    header*/
-    header.top-page{
-        width: 100%;
-        height: 100vh;
-    }
-    header.top-page nav{
-        width: inherit;
-        height: inherit;
-        flex-direction: column;
-        justify-content: flex-start;
-        position: relative;
-        border-bottom: 5px solid transparent;
-    }
-    .top-page nav .logo{
-        width: inherit;
-        height: 10vh;
-        padding: 0px 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    .top-page nav ul{
-        width: inherit;
-        height: 90vh;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    .top-page nav li{
-        width: inherit;
-        height: calc(80vh/6);
-        align-self: center;
-    }
-    .top-page nav li a:hover{
-        border-radius: 0px;
-    }
-    .top-page nav li a{
-        width: inherit;
-        font-size: 1.5em;
-        line-height: calc(80vh/6);
-        padding: 0;
-    }
+header.top-page{
+    width: 100%;
+    height: 100vh;
+}
+header.top-page nav{
+    width: inherit;
+    height: inherit;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    border-bottom: 5px solid transparent;
+}
+.top-page nav .logo{
+    width: inherit;
+    height: 10vh;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.top-page nav ul{
+    width: inherit;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.top-page nav li{
+    width: inherit;
+    height: calc(80vh/6);
+    align-self: center;
+}
+.top-page nav li a:hover{
+    border-radius: 0px;
+}
+.top-page nav li a{
+    width: inherit;
+    font-size: 1.5em;
+    line-height: calc(80vh/6);
+    padding: 0;
+}
 /*    /header*/
     
 /*    services*/
-    div.services{
-        width: 100%;
-        height: auto;
-        flex-direction: column;
-    }
-    .services .col{
-        width: inherit;
-        height: 50vh;
-        justify-content: space-evenly;
-        border-bottom: 1px solid #303030;
-    }
-    .services .col p{
-        width: inherit;
-        padding: 0px 10px;
-        font-size: 1.5em;
-        line-height: 1.5em;
-    }
+div.services{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+}
+.services .col{
+    width: inherit;
+    height: 50vh;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #303030;
+}
+.services .col p{
+    width: inherit;
+    padding: 0px 10px;
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
 /*    /services*/
     
 /*    title*/
-    div.title{
-        width: 100%;
-        margin: 20px 0px 10px;
-    }
-    
+div.title{
+    width: 100%;
+    margin: 20px 0px 10px;
+}
 /*    /title*/
     
 /*    gallery*/
-    div.gallery{
-        width: 100%;
-        height: auto;
-        justify-content: space-between;
-    }
-    .gallery .row{
-        height: auto;
-        flex-direction: column;
-    }
-    .gallery .row .col{
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .gallery .row .col p{
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
+div.gallery{
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+}
+.gallery .row{
+    height: auto;
+    flex-direction: column;
+}
+.gallery .row .col{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.gallery .row .col p{
+    left: 0;
+    right: 0;
+    margin: auto;
+}
 /*    /gallery*/
     
 /*    footer*/
-    footer{
-        height: auto;
-    }
-    footer .bottom-page{
-        width: inherit;
-        flex-direction: column;
-    }
-    footer .bottom-page .col{
-        width: inherit;
-        height: auto;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    footer .bottom-page .col h2{
-        border-bottom: 1px solid #fff;
-        margin-bottom: 20px;
-        height: auto;
-        font-size: 1.5em;
-    }
-    footer .bottom-page .col h3{
-        font-size: 1.5em;
-    }
-    footer .bottom-page .col h4{
-        font-size: 1.2em;
-    }
-    footer .bottom-page .col h5{
-        font-size: 1em;
-    }
-    footer .bottom-page .col p{
-        font-size: 1em;
-        line-height: 1em;
-    }
-    footer .bottom-page .col a{
-        font-size: 1em;
-    }
-    footer .bottom-page .col form{
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    footer .bottom-page .col input{
-        height: 50px;
-        width: 100%;
-        font-size: 1em;
-    }
-    footer .bottom-page .col textarea{
-        font-size: 1em;
-    }
-    footer .bottom-page .col input[type=submit]{
-        font-size: 1.2em;
-    }
-    footer .bottom-page .col input::-webkit-input-placeholder,
-    footer .bottom-page .col textarea::-webkit-input-placeholder{
+footer{
+    height: auto;
+}
+footer .bottom-page{
+    width: inherit;
+    flex-direction: column;
+}
+footer .bottom-page .col{
+    width: inherit;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer .bottom-page .col h2{
+    border-bottom: 1px solid #fff;
+    margin-bottom: 20px;
+    height: auto;
+    font-size: 1.5em;
+}
+footer .bottom-page .col h3{
+    font-size: 1.5em;
+}
+footer .bottom-page .col h4{
+    font-size: 1.2em;
+}
+footer .bottom-page .col h5{
+    font-size: 1em;
+}
+footer .bottom-page .col p{
+    font-size: 1em;
+    line-height: 1em;
+}
+footer .bottom-page .col a{
+    font-size: 1em;
+}
+footer .bottom-page .col form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+footer .bottom-page .col input{
+    height: 50px;
+    width: 100%;
+    font-size: 1em;
+}
+footer .bottom-page .col textarea{
+    font-size: 1em;
+}
+footer .bottom-page .col input[type=submit]{
+    font-size: 1.2em;
+}
+footer .bottom-page .col input::-webkit-input-placeholder,
+footer .bottom-page .col textarea::-webkit-input-placeholder{
     color: #989898;
     font-size: 1em;
 }
-    footer.footer2{
-        height: 40px;
-        display: flex;
-        align-items: center;
-    }
-    footer.footer2 .copy{
-        padding: 0px 10px;
-        display: flex;
-        flex-direction: column;
-    }
+footer.footer2{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+footer.footer2 .copy{
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+}
 /*    /footer*/
 }
 /*/стили для телефона*/
