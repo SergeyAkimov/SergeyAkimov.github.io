@@ -108,17 +108,10 @@ div.services{
 }
 .services section{
     width: 900px;
-/*    height: 308px;*/
     border: 2px solid #fff;
-/*    border-top: none;*/
+    border-top: none;
     position: relative;
     color: #fff;
-/*
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-*/
     text-align: center;
     padding: 75px 174px 55px;
 }
@@ -135,28 +128,6 @@ div.services{
     margin: auto;
     overflow: hidden;
 }
-/*
-.services section h3::before{
-    content: '';
-    display: block;
-    width: 235px;
-    height: 2px;
-    background: #fff;
-    position: absolute;
-    top: calc(34px/2);
-    left: -239px;
-}
-.services section h3::after{
-    content: '';
-    display: block;
-    width: 235px;
-    height: 2px;
-    background: #fff;
-    position: absolute;
-    top: calc(34px/2);
-    right: -239px;
-}
-*/
 .services section p{
     width: 550px;
     font-size: 16px;
@@ -232,7 +203,6 @@ div.works{
 }
 .works .works-row section:nth-child(even){
     flex-basis: 802px;
-/*    background: url(http://placekitten.com/802/237) no-repeat;*/
 }
 .works .works-row section.work1{
     background: url(../img/work-tl.png);
@@ -251,7 +221,6 @@ div.works{
 }
 .works .works-row section.work6{
     background: url(../img/work-br.png);
-    
 }
 .works .works-row section h3{
     position: absolute;
