@@ -487,8 +487,37 @@ footer.footer2 .copy p{
     .services .col p{
         width: inherit;
         padding: 0px 10px;
-        font-size: 1.2em;
+        font-size: 1.5em;
+        line-height: 1.5em;
     }
 /*    /services*/
+    
+/*    title*/
+    div.title{
+        width: 100%;
+        margin: 10px 0px;
+    }
+    
+/*    /title*/
+    
+/*    gallery*/
+    div.gallery{
+        width: 100%;
+        height: auto;
+        justify-content: space-evenly;
+    }
+    .gallery .row{
+        height: 100vh;
+        flex-direction: column;
+    }
+    .gallery .row .col{
+        width: 100%;
+    }
+    .gallery .row .col p{
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+/*    /gallery*/
 }
 /*/стили для телефона*/
