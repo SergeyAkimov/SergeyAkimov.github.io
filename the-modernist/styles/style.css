@@ -697,6 +697,13 @@ header.top-page nav{
         width: inherit;
         padding: 0px 10px;
     }
+    .slider .slider-wrapper .your-class .slide .slider-description p,
+    .slider .slider-wrapper .your-class .slide .slider-description a{
+        font-size: 1.2em;
+    }
+    .slider .slider-wrapper .your-class .slide .slider-description p{
+        line-height: 1.2em;
+    }
     .slider .slider-wrapper .your-class .slide .picture{
         display: none;
     }
