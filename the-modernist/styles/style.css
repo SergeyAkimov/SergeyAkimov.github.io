@@ -690,7 +690,7 @@ header.top-page nav{
     .slider .slider-wrapper,
     .slider .slider-wrapper .your-class,
     .slider .slider-wrapper .your-class .slide{
-        height: 100vh;
+        height: 320px;
         width: 100%;
     }
     .slider .slider-wrapper .your-class .slide .slider-description{
