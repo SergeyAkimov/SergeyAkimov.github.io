@@ -82,7 +82,7 @@
 .slick-prev
 {
     left: -45px;
-    background: url(../../Left-arrow.svg) no-repeat;
+    background: url(../../img/Left-arrow.svg) no-repeat;
     width: 15px;
     height: 27px;
 }
@@ -103,7 +103,7 @@
 .slick-next
 {
     right: -45px;
-    background: url(../../Right_arrow.svg) no-repeat;
+    background: url(../../img/Right_arrow.svg) no-repeat;
     width: 15px;
     height: 27px;
 }
@@ -209,4 +209,12 @@
 {
     opacity: .75;
     color: black;
+}
+
+@media screen and (min-width:480px) and (max-width:823px){
+.slick-prev,
+.slick-next {
+    display: none !important;
+}
+    
 }

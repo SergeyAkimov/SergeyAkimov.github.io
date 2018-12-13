@@ -32,7 +32,6 @@
     <!--   /шапка-->
     
 <!--    слайдер-->
-<!--
     <div class="slider">
         <div class="slider-wrapper">
             <div class="your-class">
@@ -63,7 +62,6 @@
             </div>
         </div>
     </div>
--->
     <!--    /слайдер-->
     
 <!--    сервисы-->
@@ -228,7 +226,9 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="slick-1.8.1/slick/slick.min.js"></script>
 <script type="text/javascript">
-$('.your-class').slick();
+$('.your-class').slick({
+    mobileFirst: true
+});
 </script>
 </body>
 </html>

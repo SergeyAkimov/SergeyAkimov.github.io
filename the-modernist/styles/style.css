@@ -58,11 +58,13 @@ table {
 body{
     background: #600;
 }
+
 /*шапка*/
 header.top-page{
     border-top: 5px solid #76c38f;
     height: 78px;
     background: rgba(0, 0, 0, 0.5);
+    border-bottom: 5px solid transparent;
 }
 .top-page nav{
     display: flex;
@@ -523,6 +525,12 @@ header.top-page nav{
 }
 /*    /header*/
     
+/*    slider*/
+.slider{
+    display: none;
+}
+/*    /slider*/
+    
 /*    services*/
 div.services{
     width: 100%;
@@ -659,7 +667,6 @@ header.top-page nav{
 }
 .top-page nav .logo{
     width: 20%;
-/*    padding: 0px 10px;*/
     transform: scale(.8);
 }
 .top-page nav ul{
@@ -676,6 +683,24 @@ header.top-page nav{
     padding: 0;
 }
 /*    /header*/
+    
+    
+/*    slider*/
+    div.slider, 
+    .slider .slider-wrapper,
+    .slider .slider-wrapper .your-class,
+    .slider .slider-wrapper .your-class .slide{
+        height: 100vh;
+        width: 100%;
+    }
+    .slider .slider-wrapper .your-class .slide .slider-description{
+        width: inherit;
+        padding: 0px 10px;
+    }
+    .slider .slider-wrapper .your-class .slide .picture{
+        display: none;
+    }
+/*    /slider*/
     
 /*    services*/
 div.services{
