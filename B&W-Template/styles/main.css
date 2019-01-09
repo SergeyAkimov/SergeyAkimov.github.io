@@ -1,0 +1,45 @@
+/*шрифты*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/*/шрифты*/
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 100vh;
+    background: #fff;
+}
+header nav{
+    width: 630px;
+    height: 54px;
+    margin: auto;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    -ms-align-items: center;
+    align-items: center;
+}
+header nav a{
+    font-family: Roboto;
+    font-size: 13px;
+    color: #989696;
+    text-decoration: none;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+header nav a:hover{
+    color: #010101;
+}
+header nav .logo{
+    width: 55px;
+    height: inherit;
+    background: url(../img/Logo.png) no-repeat;
+}
