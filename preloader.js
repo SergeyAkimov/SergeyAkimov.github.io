@@ -7,6 +7,3 @@ document.body.onload = function(){
     }, 4000);
 }
 
-$(document).ready(function() {
-    $("#title").addClass("title"); 
-    });  
