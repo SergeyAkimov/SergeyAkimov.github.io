@@ -169,7 +169,6 @@ body{
 .card-container{
   width: 90%;
   margin: auto;
-/*   background: #099; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -182,7 +181,6 @@ body{
   text-decoration: none;
   width: 240px;
   height: 300px;
-  background: ;
   border: 5px solid transparent;
   transition: all .5s;
   position: relative;
@@ -251,12 +249,12 @@ body{
   color: #000;
 }
 .card-maket .card-preview{
-  
   color: #000;
   font-weight: bold;
   font-size: 2em;
   background: url(http://placekitten.com/240/150) no-repeat;
-  width: 240px;
+  background-size: cover;
+  width: inherit;
   height: 150px;
 }
 .card-maket .card-preview::before,
@@ -278,9 +276,6 @@ body{
 .card-maket .card-preview::after{
   right: calc(-240px/2);
 }
-.card-maket:hover img{
-  
-}
 .card-maket:hover .card-preview::before{
   left: 0;
 }
@@ -291,7 +286,46 @@ body{
   color: #fff;
   font-size: 1.2em;
   text-indent: 10px;
-  
   margin: 10px;
 }
 /* /карточка макета */
+
+
+@media screen and (min-width:480px) and (max-width:800px) {
+  /* Target landscape smartphones, portrait tablets, narrow desktops
+
+  */
+}
+
+@media screen and (max-width:479px) {
+  /* Target portrait smartphones */
+    
+    .title{
+        margin: 0;
+        margin-bottom: 10vh;
+        padding: 0 10px;
+        height: 90vh;
+        font-size: 2em;
+    }
+    .title span{
+        width: 100%;
+        margin-top: 10vh;
+        font-size: 0.9em;
+    }
+    
+    .card-container{
+        width: 100%;
+    }
+    .card-maket{
+        width: inherit;
+        height: 50vh;
+        margin-bottom: 10px;
+    }
+    .card-maket .card-preview{
+        height: 25vh;
+    }
+    .card-maket .card-preview::before,
+    .card-maket .card-preview::after{
+        height: 50vh;
+    }
+}
