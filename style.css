@@ -291,10 +291,17 @@ body{
 /* /карточка макета */
 
 
-@media screen and (min-width:480px) and (max-width:800px) {
+@media screen and (min-width:480px) and (max-width:812px) {
   /* Target landscape smartphones, portrait tablets, narrow desktops
 
   */
+    .card-maket::before{
+        display: none;
+    }
+    .card-maket .card-preview::before,
+    .card-maket .card-preview::after{
+        display: none;
+    }
 }
 
 @media screen and (max-width:479px) {
