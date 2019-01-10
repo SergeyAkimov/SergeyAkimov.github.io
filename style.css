@@ -321,11 +321,14 @@ body{
         height: 50vh;
         margin-bottom: 10px;
     }
+    .card-maket::before{
+        display: none;
+    }
     .card-maket .card-preview{
         height: 25vh;
     }
     .card-maket .card-preview::before,
     .card-maket .card-preview::after{
-        height: 50vh;
+        display: none;
     }
 }
