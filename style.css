@@ -249,13 +249,15 @@ body{
   color: #000;
 }
 .card-maket .card-preview{
-  color: #000;
+  color: #fff;
   font-weight: bold;
-  font-size: 2em;
-  background: url(http://placekitten.com/240/150) no-repeat;
+  font-size: 1.7em;
   background-size: cover;
   width: inherit;
   height: 150px;
+}
+.card-maket .img1{
+    background: url(http://placekitten.com/240/150) no-repeat;
 }
 .card-maket .card-preview::before,
 .card-maket .card-preview::after{
