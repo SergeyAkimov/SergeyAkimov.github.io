@@ -309,10 +309,16 @@ body{
     
     .title{
         margin: 0;
-        margin-bottom: 10vh;
         padding: 0 10px;
-        height: 90vh;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         font-size: 2em;
+    }
+    .title::before,
+    .title::after{
+        display: none;
     }
     .title span{
         width: 100%;
