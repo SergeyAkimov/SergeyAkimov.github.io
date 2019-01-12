@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 /*Общие стили*/
 *{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
@@ -17,16 +18,27 @@ a{
 /*header*/
 header{
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background: url(../img/header-background.png) no-repeat;
     background-size: cover;
 }
 header .header-title{
     width: 818px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     color: #fff;
     text-align: center;
 /*    position: relative;*/
@@ -36,7 +48,9 @@ header .header-title .first-svg{
     background-size: cover;
     width: 65px;
     height: 69px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 /*
     position: absolute;
     top: 285px;
@@ -51,14 +65,18 @@ header .header-title p{
     line-height: 29px;
     letter-spacing: 60;
     width: 575px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 header .header-title .second-svg{
     background: url(../img/header-mouse.svg) no-repeat;
     background-size: cover;
     width: 23px;
     height: 37px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 /*
     position: absolute;
     bottom: 115px;
@@ -69,9 +87,15 @@ header .header-title .second-svg{
 /*about us*/
 div.about{
     height: 631px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .about section{
     width: 900px;
@@ -79,10 +103,19 @@ div.about{
     border: 2px solid #3c3c3c;
     position: relative;
     color: #3c3c3c;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
 }
 .about section h3{
@@ -104,9 +137,15 @@ div.about{
 /*services*/
 div.services{
     height: 488px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background: url(../img/services-background.png) no-repeat;
     background-size: cover;
 }
@@ -119,9 +158,15 @@ div.services{
     color: #fff;
     text-align: center;
 /*    padding: 75px 174px 55px;*/
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .services section h3{
     width: 419px;
@@ -146,9 +191,15 @@ div.services{
 /*what we do*/
 div.what{
    height: 1414px; 
+    display: -webkit-box; 
+    display: -ms-flexbox; 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .what section{
     width: 900px;
@@ -156,10 +207,19 @@ div.what{
     border: 2px solid #3c3c3c;
     position: relative;
     color: #3c3c3c;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
 }
 .what section h3{
@@ -174,9 +234,16 @@ div.what{
 .what section .what-description{
     width: 540px;
     height: 270px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .what section .what-description h4{
     text-transform: uppercase;
@@ -192,14 +259,25 @@ div.what{
 /*works*/
 div.works{
     height: 484px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .works .works-row{
     height: 237px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .works .works-row section{
     background: url(http://placekitten.com/548/237) no-repeat;
@@ -207,10 +285,12 @@ div.works{
     position: relative;
 }
 .works .works-row section:nth-child(odd){
-    flex-basis: 548px;
+    -ms-flex-preferred-size: 548px;
+        flex-basis: 548px;
 }
 .works .works-row section:nth-child(even){
-    flex-basis: 802px;
+    -ms-flex-preferred-size: 802px;
+        flex-basis: 802px;
 }
 .works .works-row section.work1{
     background: url(../img/work-tl.png);
@@ -243,9 +323,15 @@ div.works{
 /*contact us*/
 div.contact{
     height: 490px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .contact section{
     width: 900px;
@@ -253,10 +339,19 @@ div.contact{
     border: 2px solid #3c3c3c;
     position: relative;
     color: #3c3c3c;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
 }
 .contact section h3{
@@ -290,20 +385,28 @@ footer{
     width: 305px;
     height: 100px;
     margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 footer .svg{
     background: url(../img/bottom_img.png) no-repeat;
     width: 35px;
     height: 37px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 footer span{
     display: block;
     font-size: 14px;
     color: #3c3c3c;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 /*/footer*/
 
@@ -337,14 +440,22 @@ header .header-title .second-svg{
 /*    about*/
 div.about{
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .about section{
     width: inherit;
     height: 90vh;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     border: none;
     border-top: 2px solid #3c3c3c;
     padding: 0px 10px;
@@ -371,7 +482,10 @@ div.services{
     border: none;
     position: relative;
     color: #fff;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
     padding: 0px 10px;
 }
@@ -398,9 +512,15 @@ div.what{
     width: 100%;
     height: auto;
     margin: 20px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .what section{
     width: inherit;
@@ -417,7 +537,8 @@ div.what{
 .what section .what-description{
     width: inherit;
     height: 100vh;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     position: relative;
     border-bottom: 1px solid #3c3c3c;
 }
@@ -426,21 +547,31 @@ div.what{
 /*    works*/
 div.works{
     height: 100vh;
-    flex-direction: column;
-    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
 }
 .works .works-row{
     height: auto;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .works .works-row section{
     height: 237px;
 }
 .works .works-row section:nth-child(odd){
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
 }
 .works .works-row section:nth-child(even){
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
 }
 .works .works-row section h3{
     left: 10px;
@@ -455,9 +586,15 @@ div.works{
 /*    contact*/
 div.contact{
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-bottom: 2px solid #3c3c3c;
 }
 .contact section{
@@ -466,7 +603,8 @@ div.contact{
     border: none;
     border-top: 2px solid #3c3c3c;
     position: relative;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 .contact section h3{
     width: auto;
@@ -496,21 +634,29 @@ div.contact{
     height: 50px;
     margin: 0;
     padding: 0 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 footer .svg{
     background: url(../img/bottom_img.png) no-repeat;
     background-size: contain;
     width: 25px;
     height: 27px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 footer span{
     display: block;
     font-size: 14px;
     color: #3c3c3c;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
 }
 /*    /footer*/
 }
