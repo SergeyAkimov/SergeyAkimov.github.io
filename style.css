@@ -384,6 +384,10 @@ body{
     background: url(img/img2.jpg) no-repeat;
     background-size: cover;
 }
+.card-maket .img3{
+    background: url(img/img3.png);
+    background-size: cover;
+}
 .card-maket .card-preview::before,
 .card-maket .card-preview::after{
   content: '';
