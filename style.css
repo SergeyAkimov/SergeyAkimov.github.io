@@ -351,7 +351,8 @@ body{
   content: 'Открыть';
   color: transparent;
   position: absolute;
-  top: 0;
+  top: 0px;
+  line-height: 250px;
   display: block;
   width: inherit;
   text-align: center;
@@ -395,7 +396,7 @@ body{
   display: block;
   width: calc(240px/2);
   height: 300px;
-  background: rgba(255, 255, 255, .5);
+  background: rgba(255, 255, 255, 0.81);
   position: absolute;
   top: 0;
   -webkit-transition: all .5s;
