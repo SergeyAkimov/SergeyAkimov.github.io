@@ -570,7 +570,7 @@ blockquote{
         width: 100%;
         height: 100vh;
         background: rgba(226, 73, 75, 0.9);
-        position: fixed;
+        position: absolute;
         top: 0;
         right: -100%;
         opacity: 0;
@@ -585,7 +585,7 @@ blockquote{
     } 
     header > label{
 /*   border: 1px solid #f00; */
-        position: fixed;
+        position: absolute;
         bottom: 30px;
         right: 10px;
         z-index: 999;
