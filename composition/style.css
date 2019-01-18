@@ -543,11 +543,7 @@ blockquote{
         width: 100%;
     }
     header{
-/*        height: 100vh;*/
         border-bottom: 0;
-        overflow: hidden !important;
-        position: absolute;
-/*        z-index: -1;*/
     }
     header nav ul{
         width: 100%;
