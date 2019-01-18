@@ -543,11 +543,11 @@ blockquote{
         width: 100%;
     }
     header{
-        height: 100vh;
+/*        height: 100vh;*/
         border-bottom: 0;
         overflow: hidden !important;
-        position: fixed;
-        z-index: 2;
+        position: absolute;
+/*        z-index: -1;*/
     }
     header nav ul{
         width: 100%;
@@ -570,7 +570,8 @@ blockquote{
         width: 100%;
         height: 100vh;
         background: rgba(226, 73, 75, 0.9);
-        position: absolute;
+        position: fixed;
+        z-index: 998;
         top: 0;
         right: -100%;
         opacity: 0;
@@ -585,7 +586,7 @@ blockquote{
     } 
     header > label{
 /*   border: 1px solid #f00; */
-        position: absolute;
+        position: fixed;
         bottom: 30px;
         right: 10px;
         z-index: 999;
@@ -744,5 +745,8 @@ blockquote{
     }
     .contacts > section > form > input[type=submit]{
         width: 100%;
+    }
+    .bg{
+        display: none;
     }
 }
