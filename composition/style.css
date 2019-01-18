@@ -1,5 +1,6 @@
 *{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-family: Georgia;
     margin: 0;
     padding: 0;
@@ -29,17 +30,33 @@ header > label{
 header nav{
 /*    border: 1px solid #f00;*/
     height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 header nav > a{
     height: 55px;
 /*    border: 1px solid #f00;*/
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 header nav h1{
     color: #505050;
@@ -56,10 +73,18 @@ header nav ul{
     height: 55px;
     background: #e2494b;
     border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 header nav ul li{
 /*    border: 1px solid #f00;*/
@@ -83,8 +108,12 @@ blockquote{
     height: 133px;
     margin: auto;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 /*/цитата*/
 
@@ -106,9 +135,15 @@ blockquote{
     font-size: 18px;
     color: #fff;
     height: 29px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
 }
 .title::before{
@@ -126,9 +161,15 @@ blockquote{
     background: #e2494b;
     border-radius: 5px;
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 /*первый заголовок*/
 .title:first-of-type::after{
@@ -148,18 +189,35 @@ blockquote{
 .services{
 /*    border: 1px solid #f00;*/
     height: 228px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .services > section{
 /*    border: 1px solid #000;*/
     height: inherit;
-    flex-grow: 1;
-    flex-basis: 300px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 300px;
+        flex-basis: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     color: #979797;
 }
 .services > section > h3{
@@ -167,8 +225,12 @@ blockquote{
     font-size: 18px;
     font-weight: bold;
     color: #666;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .services > section > h3::before{
     content: '';
@@ -196,18 +258,34 @@ blockquote{
 .players{
 /*    border: 1px solid #000;*/
     height: 386px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .players > section{
 /*    border: 1px solid #f00;*/
     width: 176px;
     height: 296px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     color: #979797;
     font-size: 13px
 }
@@ -233,10 +311,19 @@ blockquote{
 .works{
 /*    border: 1px solid #000;*/
     height: 250px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 /*/works*/
 
@@ -245,31 +332,56 @@ blockquote{
 /*    border: 1px solid #f00;*/
     height: 355px;
     background: #e2e2e2;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-bottom: 1px solid #c3c3c3;
 }
 .contacts > section{
 /*    border: 1px solid #000;*/
     height: 270px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .contacts > section:first-child{
 /*    width: 470px;*/
-    flex-grow: 2;
-    flex-basis: 470px;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    -ms-flex-preferred-size: 470px;
+        flex-basis: 470px;
 }
 .contacts > section:nth-child(2){
-    flex-grow: 1;
-    flex-basis: 225px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 225px;
+        flex-basis: 225px;
 }
 .contacts > section:last-child{
-    flex-grow: 1;
-    flex-basis: 225px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 225px;
+        flex-basis: 225px;
 }
 .contacts > section > h3{
     font-size: 16px;
@@ -306,15 +418,29 @@ blockquote{
 .contacts > section > address{
 /*    border: 1px solid #f00;*/
     height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .contacts > section > address > div{
 /*    border: 1px solid #0ff;*/
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .contacts > section > address > div:first-child{
 /*    height: 70px;*/
@@ -331,9 +457,16 @@ blockquote{
 .contacts > section > form{
 /*    border: 1px solid #000;*/
     height: 233px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .contacts > section > form > input[type=text]{
     height: 31px;
@@ -375,10 +508,19 @@ blockquote{
     height: 60px;
     background: #e2e2e2;
     border-top: 1px solid #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .copy > span{
     color: #999;
@@ -411,7 +553,10 @@ blockquote{
         height: 90vh;
         background: transparent;
         border-radius: 0;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     header nav ul a{
         font-size: 1.5em;
@@ -428,6 +573,8 @@ blockquote{
         top: 0;
         right: -100%;
         opacity: 0;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
         transition: all .5s;
     }
     header > nav > a{
@@ -438,7 +585,7 @@ blockquote{
     header > label{
 /*   border: 1px solid #f00; */
         position: fixed;
-        bottom: 10px;
+        top: 10px;
         right: 10px;
         z-index: 999;
         width: 50px;
@@ -446,10 +593,18 @@ blockquote{
         color: #fff;
         background: #e2494b;
         border-radius: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         cursor: pointer;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
         transition: all .5s;
     }
     header > label:active::after{
@@ -460,7 +615,22 @@ blockquote{
         height: 50px;
         border-radius: 50%;
         border: 1px solid #000;
-        animation: label-zoom .1s;
+        -webkit-animation: label-zoom .1s;
+                animation: label-zoom .1s;
+    }
+    @-webkit-keyframes label-zoom {
+        0%{
+            width: 50px;
+            height: 50px;
+          }
+        25%, 80%{
+            opacity: 1;
+            }
+        100%{
+          opacity: 0;
+          width: 100px;
+          height: 100px;
+        }
     }
     @keyframes label-zoom {
         0%{
@@ -519,7 +689,9 @@ blockquote{
         width: 100%;
         height: 45vh;
         margin-bottom: 5vh;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         text-align: center;
         border-bottom: 1px solid #e2494b;
     }
