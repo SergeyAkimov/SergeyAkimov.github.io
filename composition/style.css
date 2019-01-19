@@ -578,9 +578,14 @@ blockquote{
     }
     header > nav > a{
         width: inherit;
-        height: 10vh;
+        height: 9vh;
+        margin-top: 1vh;
         text-align: center;
     } 
+    header > nav > a > h1,
+    header > nav > a > span{
+        color: #fff;
+    }
     header > label{
 /*   border: 1px solid #f00; */
         position: fixed;
@@ -675,10 +680,21 @@ blockquote{
     }
     .services{
         height: auto;
+        padding: 0 10px;
     }
     .services > section{
-        height: 160px;
-        padding: 0 10px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .services > section:first-child{
+        margin-top: 20px;
+    }
+    .services > section > p{
+        font-size: 1.3em;
+        line-height: 23px;
+    }
+    .services > section > a{
+        font-size: 1.3em;
     }
     .players{
         height: auto;
@@ -687,7 +703,7 @@ blockquote{
     }
     .players > section{
         width: 100%;
-        height: 300px;
+        height: auto;
         margin-bottom: 5vh;
         -webkit-box-align: center;
             -ms-flex-align: center;
@@ -695,8 +711,17 @@ blockquote{
         text-align: center;
         border-bottom: 1px solid #e2494b;
     }
+    .players > section > h4{
+        font-size: 1.3em;
+        margin-top: 10px;
+    }
+    .players > section > p{
+        font-size: 1.3em;
+        line-height: 23px;
+        margin: 10px 0px;
+    }
     .players > section > a{
-        margin-bottom: 20px;
+        font-size: 1.3em;
     }
     .works{
         height: 100vh;
@@ -772,7 +797,7 @@ blockquote{
     }
     header nav ul{
         width: 100%;
-        height: 90vh;
+        height: 80vh;
         background: transparent;
         border-radius: 0;
         -webkit-box-orient: vertical;
@@ -804,9 +829,14 @@ blockquote{
     }
     header > nav > a{
         width: inherit;
-        height: 10vh;
+        height: 9vh;
+        margin-top: 1vh;
         text-align: center;
     } 
+    header > nav > a > h1,
+    header > nav > a > span{
+        color: #fff;
+    }
     header > label{
 /*   border: 1px solid #f00; */
         position: fixed;
@@ -906,6 +936,7 @@ blockquote{
     .services > section p{
         font-size: 1.3em;
         line-height: 23px;
+        width: 97%;
     }
     .services > section a{
         font-size: 1.3em;
