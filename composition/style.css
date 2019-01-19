@@ -19,8 +19,8 @@ a{
 
 header{ 
     width: 100%;
-    height: 135px;
-    border-bottom: 1px solid #e2e2e2;
+    height: 269px;
+/*    border-bottom: 1px solid #e2e2e2;*/
 }
 header > input{
     display: none;
@@ -30,7 +30,7 @@ header > label{
 }
 header nav{
 /*    border: 1px solid #f00;*/
-    height: inherit;
+    height: 135px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -747,6 +747,219 @@ blockquote{
     }
     .contacts > section > form > input[type=submit]{
         width: 100%;
+    }
+    .bg{
+        display: none;
+    }
+}
+@media screen and (min-width:480px) and (max-width:812px) {
+  /* Target landscape smartphones, portrait tablets, narrow desktops
+    
+  */
+    #wrapper{
+        width: 100%;
+        padding: 0px 10px;
+    }
+    header{
+        height: auto;
+    }
+    header nav ul{
+        width: 100%;
+        height: 90vh;
+        background: transparent;
+        border-radius: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    header nav ul a{
+        font-size: 1.5em;
+    }
+    blockquote{
+        width: 100%;
+    }
+    header > nav{
+/*        border: 1px solid #fff;*/
+        width: 100%;
+        height: 100vh;
+        background: rgba(226, 73, 75, 0.9);
+        position: fixed;
+        z-index: 998;
+        top: 0;
+        right: -100%;
+        opacity: 0;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+    }
+    header > nav > a{
+        width: inherit;
+        height: 10vh;
+        text-align: center;
+    } 
+    header > label{
+/*   border: 1px solid #f00; */
+        position: fixed;
+        bottom: 30px;
+        right: 10px;
+        z-index: 999;
+        width: 10vh;
+        height: 10vh;
+        color: #fff;
+        font-size: 1.7em;
+        background: #e2494b;
+        border-radius: 50%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        cursor: pointer;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
+    }
+    header > label:active::after{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid #000;
+        -webkit-animation: label-zoom .1s;
+                animation: label-zoom .1s;
+    }
+    @-webkit-keyframes label-zoom {
+        0%{
+            width: 50px;
+            height: 50px;
+          }
+        25%, 80%{
+            opacity: 1;
+            }
+        100%{
+          opacity: 0;
+          width: 100px;
+          height: 100px;
+        }
+    }
+    @keyframes label-zoom {
+        0%{
+            width: 50px;
+            height: 50px;
+          }
+        25%, 80%{
+            opacity: 1;
+            }
+        100%{
+          opacity: 0;
+          width: 100px;
+          height: 100px;
+        }
+    }
+    header > label::before{
+        content: 'O';
+    }
+    header > input:checked ~ nav{
+        right: 0;
+        opacity: 1;
+    }
+    header > input:checked ~ label::before{
+/*   border: 1px solid #f00; */
+        content: 'X';  
+    }
+    .slider{
+        height: auto;
+    }
+    .slider img{
+        margin-bottom: 20px;
+    }
+    .slick-dots{
+        display: none !important;
+    }
+    .services{
+        height: auto;
+    }
+    .services > section{
+        height: auto;
+        margin: 20px 0;
+    }
+    .players{
+        height: auto;
+        margin-top: 20px;
+/*        padding: 0 10px;*/
+    }
+    .players > section{
+        margin-bottom: 5vh;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        text-align: center;
+    }
+    .works{
+        height: auto;
+        margin: 10px 0 0;
+/*        padding: 0px 10px;*/
+    }
+    .works a{
+        margin-bottom: 10px;
+/*        width: 100%;*/
+    }
+    .contacts{
+        height: auto;
+    }
+    .contacts > section{
+        height: auto;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e2494b;
+    }
+    .contacts > section:first-child{
+        flex-basis: 100%;
+        margin-top: 20px;
+    }
+    .contacts > section:nth-child(2){
+        height: 50vh;
+    }
+    .contacts > section:last-child{
+        height: 50vh;
+        border-bottom: none;
+    }
+    .contacts > section > h3{
+        margin-bottom: 10px;
+        font-size: 1.5em;
+    }
+    .contacts > section > article{
+
+    }
+    .contacts > section > article > img{
+        width: 20%;
+        height: 20%;
+    }
+    .contacts > section > article > p{
+        width: 77%;
+        margin-top: 0;
+    }
+    
+    .contacts > section > form{
+        height: 50vh;
+    }
+    .contacts > section > form > input{
+        height: 5vh !important;
+        font-size: 1.5em;
+    }
+    .contacts > section > form > textarea{
+        height: 20vh;
+        font-size: 1.5em;
+    }
+    .contacts > section > form > input[type=submit]{
+        width: 100%;
+        font-size: 1.5em;
     }
     .bg{
         display: none;
