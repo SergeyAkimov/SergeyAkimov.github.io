@@ -543,6 +543,7 @@ blockquote{
         width: 100%;
     }
     header{
+        height: auto;
         border-bottom: 0;
     }
     header nav ul{
@@ -673,10 +674,10 @@ blockquote{
         border-radius: 0;
     }
     .services{
-        height: 100vh;
+        height: auto;
     }
     .services > section{
-        height: calc(100vh/3);
+        height: 160px;
         padding: 0 10px;
     }
     .players{
@@ -686,7 +687,7 @@ blockquote{
     }
     .players > section{
         width: 100%;
-        height: 45vh;
+        height: 300px;
         margin-bottom: 5vh;
         -webkit-box-align: center;
             -ms-flex-align: center;
@@ -694,11 +695,17 @@ blockquote{
         text-align: center;
         border-bottom: 1px solid #e2494b;
     }
+    .players > section > a{
+        margin-bottom: 20px;
+    }
     .works{
         height: 100vh;
         padding: 0px 10px;
     }
     .works a{
+        flex-basis: 100%;
+    }
+    .works a img{
         width: 100%;
     }
     .contacts{
@@ -712,6 +719,9 @@ blockquote{
     }
     .contacts > section:first-child{
         margin-top: 20px;
+    }
+    .contacts > section:nth-child(2){
+        height: 200px;
     }
     .contacts > section:last-child{
         border-bottom: none;
@@ -730,19 +740,17 @@ blockquote{
     .contacts > section > article > p{
         width: 65%;
         margin-top: 0;
-    }
-    .contacts > section:nth-child(2){
-        height: 40vh;
+        line-height: 15px;
     }
     .contacts > section > form{
-        height: 50vh;
+        height: 400px;
     }
     .contacts > section > form > input{
-        height: 7vh !important;
+        height: 50px !important;
         font-size: 1.2em;
     }
     .contacts > section > form > textarea{
-        height: 20vh;
+        height: 200px;
         font-size: 1.2em;
     }
     .contacts > section > form > input[type=submit]{
@@ -758,7 +766,6 @@ blockquote{
   */
     #wrapper{
         width: 100%;
-        padding: 0px 10px;
     }
     header{
         height: auto;
@@ -778,6 +785,8 @@ blockquote{
     }
     blockquote{
         width: 100%;
+        font-size: 1.5em;
+        padding: 0px 10px;
     }
     header > nav{
 /*        border: 1px solid #fff;*/
@@ -883,36 +892,62 @@ blockquote{
     .slick-dots{
         display: none !important;
     }
+    .title{
+        font-size: 1.3em;
+    }
     .services{
         height: auto;
+        padding: 0px 10px;
     }
     .services > section{
         height: auto;
         margin: 20px 0;
     }
+    .services > section p{
+        font-size: 1.3em;
+        line-height: 23px;
+    }
+    .services > section a{
+        font-size: 1.3em;
+    }
     .players{
         height: auto;
         margin-top: 20px;
-/*        padding: 0 10px;*/
+        padding: 0 10px;
     }
     .players > section{
-        margin-bottom: 5vh;
+        height: 350px;
+        margin-bottom: 20px;
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
         text-align: center;
     }
+    .players > section > h4{
+        font-size: 1.3em;
+    }
+    .players > section > p{
+        font-size: 1.3em;
+        line-height: 21px;
+    }
+    .players > section > a{
+        font-size: 1.3em;
+    }
     .works{
         height: auto;
         margin: 10px 0 0;
-/*        padding: 0px 10px;*/
+        padding: 0px 10px;
     }
     .works a{
         margin-bottom: 10px;
-/*        width: 100%;*/
+        width: 49%;
+    }
+    .works a img{
+        width: 100%;
     }
     .contacts{
         height: auto;
+        padding: 0px 10px;
     }
     .contacts > section{
         height: auto;
@@ -925,7 +960,7 @@ blockquote{
     }
     .contacts > section:nth-child(2){
         flex-basis: 100%;
-        height: 250px;
+        height: 330px;
     }
     .contacts > section:last-child{
         height: 400px;
@@ -933,20 +968,26 @@ blockquote{
     }
     .contacts > section > h3{
         margin-bottom: 10px;
-        font-size: 1.5em;
+        font-size: 1.7em;
     }
     .contacts > section > article{
-
+        margin-bottom: 20px;
     }
     .contacts > section > article > img{
         width: 20%;
         height: 20%;
     }
-    .contacts > section > article > p{
-        width: 77%;
-        margin-top: 0;
+    .contacts > section > article > a{
+        font-size: 1.3em;
     }
-    
+    .contacts > section > article > p{
+        font-size: 1.3em;
+        line-height: 25px;
+        width: 77%;
+    }
+    .contacts > section > address > div > span{
+        font-size: 1.3em !important;
+    }
     .contacts > section > form{
         height: 370px;
     }
