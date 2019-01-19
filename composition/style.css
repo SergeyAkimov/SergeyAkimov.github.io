@@ -810,7 +810,7 @@ blockquote{
     }
     blockquote{
         width: 100%;
-        font-size: 1.5em;
+        font-size: 1em;
         padding: 0px 10px;
     }
     header > nav{
@@ -923,7 +923,7 @@ blockquote{
         display: none !important;
     }
     .title{
-        font-size: 1.3em;
+        font-size: 1em;
     }
     .services{
         height: auto;
@@ -934,12 +934,12 @@ blockquote{
         margin: 20px 0;
     }
     .services > section p{
-        font-size: 1.3em;
+        font-size: 1em;
         line-height: 23px;
         width: 97%;
     }
     .services > section a{
-        font-size: 1.3em;
+        font-size: 1em;
     }
     .players{
         height: auto;
@@ -955,14 +955,14 @@ blockquote{
         text-align: center;
     }
     .players > section > h4{
-        font-size: 1.3em;
+        font-size: 1em;
     }
     .players > section > p{
-        font-size: 1.3em;
+        font-size: 1em;
         line-height: 21px;
     }
     .players > section > a{
-        font-size: 1.3em;
+        font-size: 1em;
     }
     .works{
         height: auto;
@@ -1009,15 +1009,15 @@ blockquote{
         height: 20%;
     }
     .contacts > section > article > a{
-        font-size: 1.3em;
+        font-size: 1em;
     }
     .contacts > section > article > p{
-        font-size: 1.3em;
+        font-size: 1em;
         line-height: 25px;
         width: 77%;
     }
     .contacts > section > address > div > span{
-        font-size: 1.3em !important;
+        font-size: 1em !important;
     }
     .contacts > section > form{
         height: 370px;
