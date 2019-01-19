@@ -690,11 +690,11 @@ blockquote{
         margin-top: 20px;
     }
     .services > section > p{
-        font-size: 1.3em;
-        line-height: 23px;
+        font-size: 1em;
+        line-height: 20px;
     }
     .services > section > a{
-        font-size: 1.3em;
+        font-size: 1em;
     }
     .players{
         height: auto;
@@ -712,16 +712,16 @@ blockquote{
         border-bottom: 1px solid #e2494b;
     }
     .players > section > h4{
-        font-size: 1.3em;
+        font-size: 1em;
         margin-top: 10px;
     }
     .players > section > p{
-        font-size: 1.3em;
-        line-height: 23px;
+        font-size: 1em;
+        line-height: 20px;
         margin: 10px 0px;
     }
     .players > section > a{
-        font-size: 1.3em;
+        font-size: 1em;
     }
     .works{
         height: 100vh;
@@ -935,7 +935,7 @@ blockquote{
     }
     .services > section p{
         font-size: 1em;
-        line-height: 23px;
+        line-height: 20px;
         width: 97%;
     }
     .services > section a{
@@ -959,7 +959,7 @@ blockquote{
     }
     .players > section > p{
         font-size: 1em;
-        line-height: 21px;
+        line-height: 20px;
     }
     .players > section > a{
         font-size: 1em;
@@ -1013,7 +1013,7 @@ blockquote{
     }
     .contacts > section > article > p{
         font-size: 1em;
-        line-height: 25px;
+        line-height: 20px;
         width: 77%;
     }
     .contacts > section > address > div > span{
