@@ -1,0 +1,30 @@
+.mobile
+  overflow: hidden
+  &_bg
+    background: #fbfaf8
+  &__item
+    transition: all 1s 1s
+    &:first-child
+      margin-left: $margin-negative
+    &:last-child
+      position: absolute
+      right: $margin-negative
+    &-img
+      display: flex
+      justify-content: flex-end
+  &__title
+    text-align: left
+  &__subtitle
+    text-align: left
+    line-height: 28px
+  &__list
+    list-style: none
+    li
+      list-style-image: url('../img/mobile__list-item.svg')
+      position: relative
+      margin-left: $margin-negative * 2
+      opacity: 0
+      span
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
