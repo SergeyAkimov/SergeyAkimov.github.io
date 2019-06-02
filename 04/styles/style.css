@@ -2844,6 +2844,30 @@
   }
 }
 
+.text_up {
+  text-transform: uppercase;
+}
+
+.text_low {
+  text-transform: lowercase;
+}
+
+.text_u {
+  text-decoration: underline;
+}
+
+.text_none {
+  text-decoration: none;
+}
+
+.text_white {
+  color: #ffffff;
+}
+
+.text_black {
+  color: #000000;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
