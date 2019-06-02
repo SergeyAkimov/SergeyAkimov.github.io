@@ -2784,6 +2784,66 @@
   }
 }
 
+.text_left {
+  text-align: left;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.text_right {
+  text-align: right;
+}
+
+@media (max-width: 1024px) {
+  .text_lg_left {
+    text-align: left;
+  }
+  .text_lg_center {
+    text-align: center;
+  }
+  .text_lg_right {
+    text-align: right;
+  }
+}
+
+@media (max-width: 768px) {
+  .text_md_left {
+    text-align: left;
+  }
+  .text_md_center {
+    text-align: center;
+  }
+  .text_md_right {
+    text-align: right;
+  }
+}
+
+@media (max-width: 576px) {
+  .text_sm_left {
+    text-align: left;
+  }
+  .text_sm_center {
+    text-align: center;
+  }
+  .text_sm_right {
+    text-align: right;
+  }
+}
+
+@media (max-width: 425px) {
+  .text_xs_left {
+    text-align: left;
+  }
+  .text_xs_center {
+    text-align: center;
+  }
+  .text_xs_right {
+    text-align: right;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

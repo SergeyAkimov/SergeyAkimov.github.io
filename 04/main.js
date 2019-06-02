@@ -136,7 +136,7 @@ let counterFlag = true;
   function toggleVideo(){
     if(video.paused){
       video.play();
-      $('.presentation__video-container').animate({'opacity': '0'}, 500).addClass('presentation__video-container_active');
+      $('.presentation__video-container').addClass('presentation__video-container_active');
       $('.presentation__video-container').hover(function(){
         $('.presentation__video-container').animate({'opacity': '1'}, 500);
       }, function(){
