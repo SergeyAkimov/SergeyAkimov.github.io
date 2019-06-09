@@ -2712,6 +2712,10 @@
   display: inline-block;
 }
 
+.visible_table {
+  display: table;
+}
+
 .visible_h {
   display: none;
 }
