@@ -2732,6 +2732,9 @@
   .visible_lg_ib {
     display: inline-block;
   }
+  .visible_lg_table {
+    display: table;
+  }
   .visible_lg_h {
     display: none;
   }
@@ -2748,6 +2751,9 @@
   }
   .visible_md_ib {
     display: inline-block;
+  }
+  .visible_md_table {
+    display: table;
   }
   .visible_md_h {
     display: none;
@@ -2766,6 +2772,9 @@
   .visible_sm_ib {
     display: inline-block;
   }
+  .visible_sm_table {
+    display: table;
+  }
   .visible_sm_h {
     display: none;
   }
@@ -2782,6 +2791,9 @@
   }
   .visible_xs_ib {
     display: inline-block;
+  }
+  .visible_xs_table {
+    display: table;
   }
   .visible_xs_h {
     display: none;
