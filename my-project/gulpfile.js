@@ -45,8 +45,6 @@ function watch(){
     gulp.watch('./**/*.pug', html) .on('change', browserSync.reload); //отслеживаем изменения html
 }
 
-gulp.task('html', html);
-gulp.task('style', style);
-gulp.task('script', script);
-gulp.task('watch', watch);
-gulp.task('default', gulp.parallel(html, style, script, watch));
+//делаем билд
+gulp.task('build', gulp.parallel(html, style, script));
+gulp.task('default', gulp.series('build', watch));

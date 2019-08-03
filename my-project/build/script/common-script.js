@@ -1,1 +1,1 @@
-"use strict";var sum=function(o,l){return o+l};console.log("Hello world");
+"use strict";var sum=function(n,o){return n+o};console.log("е бой");
