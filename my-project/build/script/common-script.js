@@ -1,0 +1,1 @@
+"use strict";var sum=function(o,l){return o+l};console.log("Hello world");
