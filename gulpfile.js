@@ -9,7 +9,9 @@ const gulp = require('gulp'),
         babel = require('gulp-babel'),
         uglify = require('gulp-uglify'),
         //пути сохранения файлов
-        buildLocation = 'build/',
+        build = 'build/' //для базы
+        build01 = `projects/01/${build}` //для проекта 01
+        buildLocation = build, //выбранный путь из вышеперечисленных
         path = {
             root: buildLocation,
             templates: {
