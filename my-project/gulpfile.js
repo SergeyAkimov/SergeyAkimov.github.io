@@ -83,5 +83,5 @@ gulp.task('build', gulp.parallel(template, style, script));
 gulp.task('dev', gulp.series('build', watch));
 
 //для продакшена
-gulp.task('miniFormat', gulp.series('build', miniFormat));
-gulp.task('default', gulp.series(miniFormat));
+gulp.task('prod', gulp.series('build', miniFormat));
+gulp.task('default', gulp.series('prod'));
