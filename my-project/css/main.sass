@@ -6,10 +6,9 @@ body
     font-family: sans-serif
     font-size: 3em
     display: flex
-    @include block_margin-padding(0,50px,0,50px, 0,0,0,0)    
+    @include block_margin-padding(0,50px,0,50px, 0,0,0,0)
+    @media(max-width: 768px)
+        @include block_margin-padding(0,0,0,0, 0,15px,0,15px)
+
 a
     text-decoration: none
-
-@media (max-width: 768px)
-    body
-        @include block_margin-padding(0,0,0,0, 0,15px,0,15px)
