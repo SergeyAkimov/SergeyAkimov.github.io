@@ -56,15 +56,15 @@ function script(){
 }
 
 //минификация
-function miniFormat(){
-    return [
-        style()
-            .pipe(minCss({level: 2})) //минимизировать
-            .pipe(gulp.dest(path.styles.dest)), //положить куда-то
-        script()
-            .pipe(uglify()) //минификатор js
-            .pipe(gulp.dest(path.scripts.dest)) //положить куда-то
-    ];
+function miniCss(){
+    return style()
+        .pipe(minCss({level: 2})) //минимизировать
+        .pipe(gulp.dest(path.styles.dest)); //положить куда-то
+}
+function miniJs(){
+    return script()
+        .pipe(uglify()) //минификатор js
+        .pipe(gulp.dest(path.scripts.dest)); //положить куда-то
 }
 
 //отслежка изменений
@@ -83,5 +83,5 @@ gulp.task('build', gulp.parallel(template, style, script));
 gulp.task('dev', gulp.series('build', watch));
 
 //для продакшена
-gulp.task('prod', gulp.series('build', miniFormat));
-gulp.task('default', gulp.series('prod'));
+gulp.task('buildMini', gulp.parallel(template, miniCss, miniJs));
+gulp.task('default', gulp.series('buildMini'));
