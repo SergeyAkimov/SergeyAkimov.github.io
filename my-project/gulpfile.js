@@ -17,7 +17,8 @@ const gulp = require('gulp'),
                 dest: buildLocation
             },
             styles: {
-                src: ['./node_modules/normalize.css/normalize.css', './css/*.sass'],
+                // src: ['./node_modules/normalize.css/normalize.css', './css/*.sass'],
+                src: './css/*.sass',
                 concat: 'common-style.css',
                 dest: `${buildLocation}css`
             },
