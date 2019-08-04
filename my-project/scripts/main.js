@@ -1,2 +1,2 @@
 const sum =(a,b)=>a+b;
-console.log('е бой');
+console.log('Hello world');
