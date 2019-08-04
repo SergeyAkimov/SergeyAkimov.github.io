@@ -14,7 +14,7 @@ const gulp = require('gulp'),
             root: buildLocation,
             templates: {
                 src: './html/*.pug',
-                dest: buildLocation
+                dest: './'
             },
             styles: {
                 // src: ['./node_modules/normalize.css/normalize.css', './css/*.sass'],
@@ -70,11 +70,11 @@ function miniJs(){
 //отслежка изменений
 function watch(){
     browserSync.init({
-        server: `./${buildLocation}`
+        server: `./`
     });
     gulp.watch('./css/*.sass', style); //отслеживаем изменения sass
     gulp.watch('./scripts/*.js', script) //отслеживаем изменения в скриптах
-    gulp.watch('./**/*.pug', template) .on('change', browserSync.reload); //отслеживаем изменения html
+    gulp.watch('./html/*.pug', template).on('change', browserSync.reload); //отслеживаем изменения html
 }
 
 //делаем билд
@@ -83,5 +83,4 @@ gulp.task('build', gulp.parallel(template, style, script));
 gulp.task('dev', gulp.series('build', watch));
 
 //для продакшена
-gulp.task('buildMini', gulp.parallel(template, miniCss, miniJs));
-gulp.task('default', gulp.series('buildMini'));
+gulp.task('default', gulp.parallel(template, miniCss, miniJs));
