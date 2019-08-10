@@ -12,12 +12,12 @@ circle.attr({
     fill: 'none',
     stroke: '#a00',
     strokeWidth: 5,
-    strokeDasharray: circle.getTotalLength(),
-    strokeDashoffset: circle.getTotalLength()
+    strokeDasharray: 927,
+    strokeDashoffset: 927
     
 });
 
-Snap.animate(circle.getTotalLength(), 0, function(val){
+Snap.animate(927, 0, function(val){
     circle.attr({strokeDashoffset: val});
 }, 1000, mina.easeout);
-circle.animate({strokeDashoffset: circle.getTotalLength()});
+circle.animate({strokeDashoffset: 927});
