@@ -3,7 +3,8 @@ const svgWidth = document.querySelector('#svg').clientWidth,
         s = Snap('#svg');
 
 //подсчитать координаты или радиус
-const makeCoords=(valueCenter, offset=0)=> valueCenter/2 + offset
+const makeCoords=(valueCenter, offset=0)=> valueCenter/2 + offset,
+        colorChange=()=>circle.animate({fill: 'red'}, 300)
 
 //рисуем svg
 let circle = s.circle(makeCoords(svgWidth), makeCoords(svgHeight), makeCoords(svgWidth-5));
@@ -17,7 +18,7 @@ circle.attr({
 }).transform('rotate(-90deg)');
 //по клику покрасим и выведем сообщение
 circle.node.onclick =()=> {
-    circle.attr({'fill': 'red'});
+    colorChange();
     document.querySelector('#message').innerHTML = 'Вы нажали на круг!'
 }
 
