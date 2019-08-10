@@ -3,7 +3,7 @@ const svgWidth = document.querySelector('#svg').clientWidth,
         s = Snap('#svg');
 
 //подсчитать координаты или радиус
-makeCoords=(valueCenter, offset=0)=> valueCenter/2 + offset
+const makeCoords=(valueCenter, offset=0)=> valueCenter/2 + offset
 
 //рисуем svg
 let circle = s.circle(makeCoords(svgWidth), makeCoords(svgHeight), makeCoords(svgWidth));
