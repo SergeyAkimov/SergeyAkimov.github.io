@@ -17,7 +17,9 @@ circle.attr({
     
 });
 
-Snap.animate(927, 0, function(val){
-    circle.attr({strokeDashoffset: val});
-}, 1000, mina.easeout);
-circle.animate({strokeDashoffset: 927});
+setTimeout(()=>{
+    Snap.animate(927, 0, function(val){
+        circle.attr({strokeDashoffset: val});
+    }, 500, mina.easeout);
+    // circle.animate({strokeDashoffset: 927});
+}, 500);
