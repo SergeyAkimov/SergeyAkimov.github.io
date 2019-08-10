@@ -9,14 +9,19 @@ const makeCoords=(valueCenter, offset=0)=> valueCenter/2 + offset
 let circle = s.circle(makeCoords(svgWidth), makeCoords(svgHeight), makeCoords(svgWidth-5));
 
 circle.attr({
-    fill: 'none',
+    fill: 'transparent',
     stroke: '#a00',
     strokeWidth: 5,
     strokeDasharray: 927,
     strokeDashoffset: 927
-    
-});
+}).transform('rotate(-90deg)');
+//по клику покрасим и выведем сообщение
+circle.node.onclick =()=> {
+    circle.attr({'fill': 'red'});
+    document.querySelector('#message').innerHTML = 'Вы нажали на круг!'
+}
 
+//анимируем
 setTimeout(()=>{
     Snap.animate(927, 0, function(val){
         circle.attr({strokeDashoffset: val});
