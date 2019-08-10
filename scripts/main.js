@@ -6,16 +6,18 @@ const svgWidth = document.querySelector('#svg').clientWidth,
 const makeCoords=(valueCenter, offset=0)=> valueCenter/2 + offset
 
 //рисуем svg
-let circle = s.circle(makeCoords(svgWidth), makeCoords(svgHeight), makeCoords(svgWidth));
+let circle = s.circle(makeCoords(svgWidth), makeCoords(svgHeight), makeCoords(svgWidth-5));
+
 circle.attr({
     fill: 'none',
     stroke: '#a00',
     strokeWidth: 5,
-    strokeDasharray: 1571,
-    // strokeDashoffset: 1571
+    strokeDasharray: circle.getTotalLength(),
+    strokeDashoffset: circle.getTotalLength()
     
 });
-Snap.animate(1571, 0, function(val){
+
+Snap.animate(circle.getTotalLength(), 0, function(val){
     circle.attr({strokeDashoffset: val});
 }, 1000, mina.easeout);
-circle.animate({strokeDashoffset: 0});
+circle.animate({strokeDashoffset: circle.getTotalLength()});
