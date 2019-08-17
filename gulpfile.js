@@ -74,9 +74,9 @@ function watch(){
     browserSync.init({
         server: `./`
     });
-    gulp.watch('./css/*.sass', style); //отслеживаем изменения sass
+    gulp.watch('./**/*.sass', style); //отслеживаем изменения sass
     gulp.watch('./scripts/*.js', script) //отслеживаем изменения в скриптах
-    gulp.watch('./html/*.pug', template).on('change', browserSync.reload); //отслеживаем изменения html
+    gulp.watch('./**/*.pug', template).on('change', browserSync.reload); //отслеживаем изменения html
 }
 
 //делаем билд

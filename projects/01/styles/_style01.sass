@@ -1,0 +1,69 @@
+//переменнные
+$grey: #262f32
+    
+.grid01
+    margin-top: 50px
+    display: grid
+    grid-template: repeat(4, auto) / repeat(9, calc(100% / 9)) 
+    // @media(max-width: )
+    &__item1
+        grid-area: 1/1/2/7
+        background: url("../../projects/01/imgs/01__img1.jpg")
+    &__item2
+        grid-area: 1/7/2/10
+        background: #f3f3f3
+    &__item3
+        grid-area: 2/1/4/5
+        background: url("../../projects/01/imgs/01__img2.jpg")
+    &__item4
+        grid-area: 2/5/3/10
+        background: url("../../projects/01/imgs/01__img3.jpg")
+    &__item5
+        grid-area: 3/5/4/10
+        background: url("../../projects/01/imgs/01__img4.jpg")
+    &__item6
+        grid-area: 4/1/5/4
+        background: url("../../projects/01/imgs/01__img5.jpg")
+    &__item7
+        grid-area: 4/4/5/10
+        background: url("../../projects/01/imgs/01__img6.jpg")
+    &__item1, &__item2, &__item3, &__item4, &__item5, &__item6, &__item7
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+    &__item2, &__item3, &__item4, &__item5, &__item6, &__item7
+        padding: 75px 0 70px 60px
+    &__item1, &__item3, &__item5, &__item6, &__item7
+        color: #fff
+    &__item2, &__item4
+        color: $grey
+    &__title
+        font-weight: lighter
+        font-size: 40px
+        &_bold
+            font-weight: bold
+    &__text
+        font-size: 18px
+        line-height: 28px
+        margin-top: 60px
+    &__button
+        padding: 17px 40px
+        border-width: 1px
+        border-style: solid
+        border-radius: 10px
+        display: inline-block
+        margin-top: 55px
+        transition: .3s
+        &_grey
+            color: $grey
+            border-color: $grey
+            &:hover
+                color: #a00
+                border-color: #a00
+        &_white
+            color: #fff
+            border-color: #fff
+            &:hover
+                color: #a00
+                border-color: #a00
+            

@@ -1,5 +1,7 @@
 @import 'margins-and-paddings.sass'
-
+@import '../projects/01/styles/style01.sass'
+* 
+    box-sizing: border-box
 body
     background: #000
     color: #fff
@@ -8,7 +10,6 @@ body
     display: flex
     flex-direction: column
     align-items: center
-    @include block_margin-padding(0,50px,0,50px, 0,0,0,0)
     @media(max-width: 768px)
         @include block_margin-padding(0,0,0,0, 0,15px,0,15px)
         font-size: 1em
