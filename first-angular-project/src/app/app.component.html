@@ -1,0 +1,15 @@
+<div class="container cards">
+  <div class="cards__item" *ngFor="let card of cards">
+    <img [src]="card.img" alt="">
+    <h2 class="cards__title">{{card.title}}</h2>
+    <button class="cards__button" type="button" (click)="showInformation(card)">Подробнее</button>
+    <!-- создать компонент, в котором отображаются все комментарии -->
+    <app-comments-block [cardComments] = "card.userComment"></app-comments-block>
+    <!-- <p>{{card.userComment | json}}</p> -->
+  </div>
+</div>
+<app-card-information *ngIf="currCard.showInf" 
+  currCardTitle = "{{currCard.title}}"
+  currCardDesc = "{{currCard.description}}"
+  currCardUserComment = "{{currCard.userComment}}"
+  (totalMessage)="showMessage($event)"></app-card-information>
