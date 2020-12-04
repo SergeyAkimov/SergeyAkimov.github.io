@@ -1,0 +1,243 @@
+@import './variables-and-mixins.less';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+
+body {
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    height: 100vh;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    color: @color-white;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: transparent;
+    padding: 0;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    .col_width(50%);
+    .flex-block(row, nowrap, space-between, center);
+    .default-block();
+    margin-bottom: 20px;
+    &__title {
+        &-block {
+            .flex-block(row, nowrap, flex-start, center);
+        }
+        &-name {
+            font-size: 20px;
+        }
+    }
+    &__buy {
+        .button(@color-black, @color-white);
+    }
+}
+
+.card {
+    position: relative;
+    &__front {
+        .col_width(50%);
+        .default-block();
+        display: grid;
+        grid-template-areas: 
+            "card-title card-title"
+            "card-number card-number"
+            "card-date card-date"
+            "card-owner card-continue";
+        .card {
+            &__input {
+                &-block {
+                    &:not(:nth-last-child(2)) {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+    &__title {
+        width: 100%;
+        text-align: center;
+        grid-area: card-title;
+    }
+    &__input{
+        &-block {
+            position: relative;
+            &--type {
+                &--number {
+                    grid-area: card-number;
+                }
+                &--date {
+                    grid-area: card-date;
+                    justify-self: center;
+                }
+                &--owner {
+                    grid-area: card-owner;
+                }
+                &--code {
+                    width: 90%;
+                    padding-left: 80%;
+                    .card__input-label {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+            }
+        }
+        &-text {
+            font-size: 16px;
+            padding: 15px 0;
+            border-bottom: 1px solid @color-white;
+            color: @color-white;
+            width: 100%;
+        }
+        &-label {
+            position: absolute;
+            font-size: 16px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            transition: 0.3s;
+            &.active {
+                font-size: 14px;
+                top: calc(50% - 20px);
+            }
+        }
+    }
+    &__continue {
+        grid-area: card-continue;
+        justify-self: end;
+        position: relative;
+    }
+    &__system {
+        &-block {
+            position: absolute;
+            right: 0;
+            width: @payment-circle-size * 2 - @payment-circle-size / 2;
+            height: @payment-circle-size;
+            &:before,
+            &:after {
+                content: '';
+                width: @payment-circle-size;
+                height: @payment-circle-size;
+                border-radius: 50%;
+                position: absolute;
+            }
+            &:before {
+                left: 0;
+                background: rgba(255, 0, 0, .5);
+                animation: payment-left linear 3s infinite;
+            }
+            &:after {
+                right: 0;
+                background: rgba(255, 255, 0, .5);
+                animation: payment-right linear 3s infinite;
+            }
+        }
+    }
+    &__next {
+        .card-button;
+        position: absolute;
+        right: 0;
+        // animation: payment-left 3s infinite;
+        background: rgba(255, 81, 0, 0.7);
+    }
+
+    &__back {
+        .col_width(50%);
+        .default-block();
+        position: absolute;
+        top: @position-card-back;
+        left: calc(25% + @position-card-back);
+        z-index: 2;
+        height: 100%;
+    }
+    &__line{
+        &-block {
+            height: 50px;
+            position: relative;
+            .flex-block(row, nowrap, space-between, flex-start);
+            margin-bottom: 20px;
+        }
+        &-button {
+            .card-button;
+        }
+    }
+}
+
+@keyframes payment-left {
+    0% {
+        background: rgba(255, 0, 0, .7);
+    } 50% {
+        background: rgba(255, 255, 0, .7);
+    } 100% {
+        background: rgba(255, 0, 0, .7);
+    }
+}
+@keyframes payment-right {
+    0% {
+        background: rgba(255, 255, 0, .7);
+    } 50% {
+        background: rgba(255, 0, 0, .7);
+    } 100% {
+        background: rgba(255, 255, 0, .7);
+    }
+}
+
+.fadeBtn-enter-active, .fadeBtn-leave-active {
+    transition: .5s;
+}
+.fadeBtn-enter, .fadeBtn-leave-to {
+    opacity: 0;
+}
+.fadeBtn-enter-active:before, .fadeBtn-leave-active:before {
+    transition: .5s;
+}
+.fadeBtn-enter:before, .fadeBtn-leave-to:before {
+    left: @payment-circle-size / 2;
+}
+
+.slideDown-enter-active, .slideDown-leave-active {
+    transform: translateY(0);
+    transition: .5s;
+}
+.slideDown-enter, .slideDown-leave-to {
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+.showBack-enter-active, .showBack-leave-active {
+    transform: translateX(0);
+    transition: .5s;
+}
+.showBack-enter, .showBack-leave-to {
+    opacity: 0;
+    transform: translateX(50px);
+}

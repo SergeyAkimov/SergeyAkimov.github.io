@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Gulp project</title>
+    <link rel="stylesheet" href="./css/common-style.css"/>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <header class="header">
+          <div class="header__title-block"><img class="header__title-icon" src=""/>
+            <h1 class="header__title-name">Покупка на сумму {{ price | currency('₽', 0) }}</h1>
+          </div>
+          <button class="header__buy" type="button" @click="card.show = true">Оплатить</button>
+        </header>
+        <transition name="slideDown">
+          <form class="card" action="link" v-if="card.show">
+            <div class="card__front" v-if="card.front.show">
+              <h2 class="card__title">Bank Name</h2>
+              <div class="card__input-block card__input-block--type--number">
+                <input class="card__input-text" id="cardNumber" type="text" autocomplete="off" v-model="card.number" v-mask="&quot;#### #### #### ####&quot;"/>
+                <label class="card__input-label" for="cardNumber" v-bind:class="{active : card.number}">Номер карты</label>
+              </div>
+              <div class="card__input-block card__input-block--type--date">
+                <input class="card__input-text" id="cardDate" type="text" autocomplete="off" v-model="card.date" v-mask="&quot;##/##&quot;"/>
+                <label class="card__input-label" for="cardDate" v-bind:class="{active : card.date}">Срок годности</label>
+              </div>
+              <div class="card__input-block card__input-block--type--owner">
+                <input class="card__input-text" id="cardOwner" type="text" autocomplete="off" v-model="card.owner" v-uppercase=""/>
+                <label class="card__input-label" for="cardOwner" v-bind:class="{active : card.owner}">Держатель карты</label>
+              </div>
+              <div class="card__continue">
+                <transition name="fadeBtn">
+                  <div class="card__system-block" v-if="!firstStepComplete"></div>
+                  <button class="card__next" v-else="v-else" type="button" @click="card.back.show = true"><img src="./img/arrow-step.svg"/></button>
+                </transition>
+              </div>
+            </div>
+            <transition name="showBack">
+              <div class="card__back" v-if="card.back.show">
+                <div class="card__line-block">
+                  <button class="card__line-button card__line-button_back" type="button" @click="card.back.show = false"></button>
+                  <button class="card__line-button card__line-button_next" type="button" v-if="secondStepComplete"><img src="./img/arrow-step.svg"/></button>
+                </div>
+                <div class="card__input-block card__input-block--type--code">
+                  <input class="card__input-text" id="cardCode" type="text" autocomplete="off" v-mask="&quot;###&quot;" v-model="card.code"/>
+                  <label class="card__input-label" for="cardCode" v-bind:class="{active : card.code}">cvc/cvv</label>
+                </div>
+              </div>
+            </transition>
+          </form>
+        </transition>
+      </div>
+    </div>
+    <!--скрипты не трогать!-->
+    <script src="./script/common-script.js"></script>
+  </body>
+</html>

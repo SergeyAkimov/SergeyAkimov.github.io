@@ -1,0 +1,38 @@
+//variables
+@color-black: #000;
+@color-white: #fff;
+@color-default-block: rgba(0, 0, 0, .6);
+@payment-circle-size: 50px;
+@position-card-back: 20px;
+
+//mixins
+.button(@color-bg, @color-text) {
+    padding: 12px 20px;
+    background: @color-bg;
+    color: @color-text;
+    border-radius: 10px;
+}
+.card-button {
+    border-radius: 50%;
+    width: @payment-circle-size;
+    height: @payment-circle-size;
+    background: rgba(255, 0, 0, .7);
+}
+.col_width(@size) {
+    padding: 0 10px;
+    flex: 0 0 @size;
+    max-width: @size;
+    width: 100%;
+}
+.flex-block(@direction, @wrap, @justify, @align) {
+    display: flex;
+    flex-flow: @direction @wrap;
+    justify-content: @justify;
+    align-items: @align;
+}
+.default-block() {
+    padding: 20px;
+    border-radius: 10px;
+    background: @color-default-block;
+    margin: auto;
+}

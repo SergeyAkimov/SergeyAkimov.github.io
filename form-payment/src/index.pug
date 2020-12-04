@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Gulp project
+        link(rel="stylesheet", href="./css/common-style.css")
+    body
+        #app
+            .container
+                header.header
+                    .header__title-block
+                        img.header__title-icon(src='')
+                        h1.header__title-name Покупка на сумму {{ price | currency('₽', 0) }}
+                    button.header__buy(type='button' @click='card.show = true') Оплатить
+                transition(name="slideDown")
+                    form.card(action='link' v-if='card.show')
+                        .card__front(v-if='card.front.show')
+                            h2.card__title Bank Name
+                            .card__input-block.card__input-block--type--number
+                                input.card__input-text#cardNumber(type='text' 
+                                    autocomplete='off'
+                                    v-model='card.number'
+                                    v-mask='"#### #### #### ####"')
+                                label.card__input-label(for='cardNumber'
+                                    v-bind:class='{active : card.number}') Номер карты
+                            .card__input-block.card__input-block--type--date
+                                input.card__input-text#cardDate(type='text' 
+                                    autocomplete='off'
+                                    v-model='card.date'
+                                    v-mask='"##/##"')
+                                label.card__input-label(for='cardDate'
+                                    v-bind:class='{active : card.date}') Срок годности
+                            .card__input-block.card__input-block--type--owner
+                                input.card__input-text#cardOwner(type='text' 
+                                autocomplete='off'
+                                v-model='card.owner'
+                                v-uppercase='')
+                                label.card__input-label(for='cardOwner'
+                                    v-bind:class='{active : card.owner}') Держатель карты
+                            .card__continue
+                                transition(name='fadeBtn')
+                                    .card__system-block(v-if="!firstStepComplete")
+                                    button.card__next(v-else type='button' @click='card.back.show = true')
+                                        img(src='./img/arrow-step.svg')
+                        transition(name='showBack')
+                            .card__back(v-if='card.back.show')
+                                .card__line-block
+                                    button.card__line-button.card__line-button_back(type='button'
+                                        @click='card.back.show = false')
+                                    button.card__line-button.card__line-button_next(type='button'
+                                        v-if='secondStepComplete')
+                                        img(src='./img/arrow-step.svg')
+                                .card__input-block.card__input-block--type--code
+                                    input.card__input-text#cardCode(type='text' 
+                                        autocomplete='off'
+                                        v-mask='"###"'
+                                        v-model='card.code')
+                                    label.card__input-label(for='cardCode'
+                                        v-bind:class='{active : card.code}') cvc/cvv
+
+        //скрипты не трогать!
+        script(src="./script/common-script.js")
