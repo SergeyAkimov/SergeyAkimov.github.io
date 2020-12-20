@@ -47,12 +47,16 @@ const
         //vuejs
         vue: {
             enable: 1,
-            script: './node_modules/vue/dist/vue.min.js'
+            script: './node_modules/vue/dist/vue.js'
         },
         vueMask: {
             enable: 1,
             script: './node_modules/v-mask/dist/v-mask.min.js'
-        }
+        },
+        // axios: {
+        //     enable: 1,
+        //     script: './node_modules/axios/dist/axios.min.js'
+        // }
     }
 
     //пути сохранения файлов
@@ -139,7 +143,7 @@ function watch(){
     gulp.watch('./src/css/*.less', style); //отслеживаем изменения в стилях
     gulp.watch('./src/scripts/*.js', script) //отслеживаем изменения в скриптах
     gulp.watch('./src/*.pug', template).on('change', browserSync.reload); //отслеживаем изменения html
-    gulp.watch('.src/img/**/*.*'); //отслеживаем изменения изображений
+    gulp.watch('./src/img/**/*.*', image); //отслеживаем изменения изображений
 }
 
 //делаем билд

@@ -9,28 +9,30 @@
   </head>
   <body>
     <div id="app">
-      <div class="container">
+      <div class="container" v-if="processReg">
         <header class="header">
-          <div class="header__title-block"><img class="header__title-icon" src=""/>
+          <help :text="text" :card="card.show" :confirm-phone="confirm.enterPhone" :confirm-sms="confirm.enterCode"></help>
+          <div class="header__title-block">
+            <!--img.header__title-icon(src='./img/price.svg')-->
             <h1 class="header__title-name">Покупка на сумму {{ price | currency('₽', 0) }}</h1>
           </div>
           <button class="header__buy" type="button" @click="card.show = true">Оплатить</button>
         </header>
         <transition name="slideDown">
-          <form class="card" action="link" v-if="card.show">
+          <form class="card" action="link" v-if="card.show &amp;&amp; !(confirm.enterPhone || confirm.enterCode)">
             <div class="card__front" v-if="card.front.show">
               <h2 class="card__title">Bank Name</h2>
               <div class="card__input-block card__input-block--type--number">
                 <input class="card__input-text" id="cardNumber" type="text" autocomplete="off" v-model="card.number" v-mask="&quot;#### #### #### ####&quot;"/>
-                <label class="card__input-label" for="cardNumber" v-bind:class="{active : card.number}">Номер карты</label>
+                <label for="cardNumber" v-bind:class="{active : card.number}">Номер карты</label>
               </div>
               <div class="card__input-block card__input-block--type--date">
-                <input class="card__input-text" id="cardDate" type="text" autocomplete="off" v-model="card.date" v-mask="&quot;##/##&quot;"/>
-                <label class="card__input-label" for="cardDate" v-bind:class="{active : card.date}">Срок годности</label>
+                <input class="card__input-text" id="cardDate" type="text" autocomplete="off" v-model="card.date" v-mask="&quot;##/##&quot;" v-checkdate="card"/>
+                <label for="cardDate" v-bind:class="{active : card.date}">Срок годности</label>
               </div>
               <div class="card__input-block card__input-block--type--owner">
                 <input class="card__input-text" id="cardOwner" type="text" autocomplete="off" v-model="card.owner" v-uppercase=""/>
-                <label class="card__input-label" for="cardOwner" v-bind:class="{active : card.owner}">Держатель карты</label>
+                <label for="cardOwner" v-bind:class="{active : card.owner}">Держатель карты</label>
               </div>
               <div class="card__continue">
                 <transition name="fadeBtn">
@@ -42,8 +44,8 @@
             <transition name="showBack">
               <div class="card__back" v-if="card.back.show">
                 <div class="card__line-block">
-                  <button class="card__line-button card__line-button_back" type="button" @click="card.back.show = false"></button>
-                  <button class="card__line-button card__line-button_next" type="button" v-if="secondStepComplete"><img src="./img/arrow-step.svg"/></button>
+                  <button class="card__line-button card__line-button_back" type="button" @click="card.back.show = false"><img src="./img/arrow-step.svg"/></button>
+                  <button class="card__line-button card__line-button_next" type="button" v-if="secondStepComplete" @click="confirm.enterPhone = true"><img src="./img/arrow-step.svg"/></button>
                 </div>
                 <div class="card__input-block card__input-block--type--code">
                   <input class="card__input-text" id="cardCode" type="text" autocomplete="off" v-mask="&quot;###&quot;" v-model="card.code"/>
@@ -53,6 +55,36 @@
             </transition>
           </form>
         </transition>
+        <transition name="slideDown">
+          <form class="phone-block" v-if="confirm.enterPhone" @submit.prevent="sendPhone">
+            <div class="phone-block__input-block">
+              <input class="phone-block__input-text" id="phone" type="text" autocomplete="off" v-mask="&quot;+7(###) ### ## ##&quot;" v-model="confirm.phone" required="required"/>
+              <label for="phone" v-bind:class="{active : confirm.phone}">Номер телефона</label>
+            </div>
+            <button class="phone-block__button" type="submit" :disabled="confirm.phone.length &lt; 17">Получить код</button>
+          </form>
+          <form class="phone-block" v-else-if="confirm.enterCode" @submit.prevent="sendCode">
+            <div class="phone-block__input-block">
+              <input class="phone-block__input-text" id="code" type="text" autocomplete="off" v-model="confirm.code" v-input-number=""/>
+              <label for="code" v-bind:class="{active : confirm.code}">Код подтверждения</label>
+            </div>
+            <button class="phone-block__button" type="submit" :disabled="!confirm.code.length">Отправить</button>
+            <transition name="slideDown">
+              <div class="phone-block__error" v-if="confirm.errorCode">Неправильный код. попробуйте ещё раз.</div>
+            </transition>
+          </form>
+        </transition>
+      </div>
+      <div class="container" v-else="v-else">
+        <div class="success">
+          <h2 class="success__message">Ваша покупка успешно завершена</h2>
+        </div>
+        <div class="check">
+          <!--.check__paper
+          h2.check__title Спасибо, что укпили у нас т
+          
+          -->
+        </div>
       </div>
     </div>
     <!--скрипты не трогать!-->
