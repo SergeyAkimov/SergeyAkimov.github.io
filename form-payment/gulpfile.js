@@ -74,7 +74,7 @@ const
             dest: `${buildLocation}css`
         },
         scripts: {
-            src: getPluginsSrc(plugins, 'script', './src/scripts/*js'),
+            src: getPluginsSrc(plugins, 'script', './src/scripts/*.js'),
             concat: 'common-script.js',
             dest: `${buildLocation}script`
         },

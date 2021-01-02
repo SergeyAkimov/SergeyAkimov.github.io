@@ -12245,7 +12245,6 @@ var app = new Vue({
   },
   computed: {
     firstStepComplete: function firstStepComplete() {
-      console.log(this.card.correctDate);
       return this.card.number.length === 19 && this.card.date.length === 5 && this.card.owner && this.card.correctDate;
     },
     secondStepComplete: function secondStepComplete() {
@@ -12300,9 +12299,5 @@ var app = new Vue({
     var date = new Date();
     var year = date.getFullYear();
     var month = date.getMonth() + 1;
-    console.log({
-      'год': year,
-      'месяц': month
-    });
   }
 });

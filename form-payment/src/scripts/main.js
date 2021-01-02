@@ -97,7 +97,6 @@ const app = new Vue({
     },
     computed: {
         firstStepComplete: function() {
-          console.log(this.card.correctDate);
             return this.card.number.length === 19 && 
             this.card.date.length === 5 && 
             this.card.owner &&
@@ -154,9 +153,5 @@ const app = new Vue({
       const date = new Date();
       const year = date.getFullYear();
       const month = date.getMonth() + 1;
-      console.log({
-        'год': year,
-        'месяц': month
-      });
     }
 })
